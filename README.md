@@ -234,3 +234,7 @@ CGO_ENABLED=0 go get -ldflags '-extld ld -extldflags -static' github.com/kelseyh
 ## Help
 
 Run `confd-sidecar` with no parameters to get information.
+
+## License
+
+This program is distributed under the [Apache 2.0](LICENSE) license.
