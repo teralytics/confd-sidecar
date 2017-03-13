@@ -23,7 +23,7 @@ All it needs from your service, is that it accept SIGHUP as a signal to reload i
 All of the magic happens at runtime.  At build time, all you need to do is put confd and confd-sidecar inside your container image.
 
 * You set some environment variables.
-  * You will most likely do this through your distributed containerization system, such as Marathon or Kubernetes. 
+  * You will most likely do this through your distributed containerization system, such as Marathon or Kubernetes.
 * You then start confd-sidecar, giving it as its command line the program name and the arguments of the program you want it to supervise.
   * The most likely scenario is that your program will be in a container, which also contains both confd and confd-sidecar.
 * conf-sidecar starts, preconfiguring confd for you.
@@ -76,12 +76,12 @@ confd-sidecar prometheus -config.file=/tmp/prometheus/prometheus.yml
 #   2017-03-10T14:23:46Z c2869ccbb448 /bin/confd[12]: INFO Target config /tmp/prometheus/prometheus.yml has been updated
 #   2017/03/10 14:23:46 supervisor[1]: confd has updated a config file — waiting one second to start main program
 #   2017/03/10 14:23:47 supervisor[1]: starting main program now
-#   time="2017-03-10T14:23:47Z" level=info msg="Starting prometheus (version=1.5.2, branch=master, revision=bd1182d29f462c39544f94cc822830e1c64cf55b)" source="main.go:75" 
-#   time="2017-03-10T14:23:47Z" level=info msg="Build context (go=go1.7.5, user=root@1a01c5f68840, date=20170210-16:23:28)" source="main.go:76" 
-#   time="2017-03-10T14:23:47Z" level=info msg="Loading configuration file /tmp/prometheus/prometheus.yml" source="main.go:248" 
-#   time="2017-03-10T14:23:48Z" level=info msg="Loading series map and head chunks..." source="storage.go:373" 
-#   time="2017-03-10T14:23:48Z" level=info msg="0 series loaded." source="storage.go:378" 
-#   time="2017-03-10T14:23:48Z" level=info msg="Starting target manager..." source="targetmanager.go:61" 
+#   time="2017-03-10T14:23:47Z" level=info msg="Starting prometheus (version=1.5.2, branch=master, revision=bd1182d29f462c39544f94cc822830e1c64cf55b)" source="main.go:75"
+#   time="2017-03-10T14:23:47Z" level=info msg="Build context (go=go1.7.5, user=root@1a01c5f68840, date=20170210-16:23:28)" source="main.go:76"
+#   time="2017-03-10T14:23:47Z" level=info msg="Loading configuration file /tmp/prometheus/prometheus.yml" source="main.go:248"
+#   time="2017-03-10T14:23:48Z" level=info msg="Loading series map and head chunks..." source="storage.go:373"
+#   time="2017-03-10T14:23:48Z" level=info msg="0 series loaded." source="storage.go:378"
+#   time="2017-03-10T14:23:48Z" level=info msg="Starting target manager..." source="targetmanager.go:61"
 #   time="2017-03-10T14:23:48Z" level=info msg="Listening on :9090" source="web.go:259"
 #
 # Now two minutes have passed.  The key in Consul "/prometheus/config/nodes" has been updated.  confd kicks in.
@@ -91,7 +91,7 @@ confd-sidecar prometheus -config.file=/tmp/prometheus/prometheus.yml
 #   2017-03-10T14:25:51Z c2869ccbb448 /bin/confd[12]: INFO Target config /tmp/prometheus/prometheus.yml has been updated
 #   2017/03/10 14:25:51 supervisor[1]: confd has updated a config file — waiting one second to reload main program
 #   2017/03/10 14:25:52 supervisor[1]: reloading main program now
-#   time="2017-03-10T14:25:52Z" level=info msg="Loading configuration file /tmp/prometheus/prometheus.yml" source="main.go:248" 
+#   time="2017-03-10T14:25:52Z" level=info msg="Loading configuration file /tmp/prometheus/prometheus.yml" source="main.go:248"
 #
 # As you can see, the SIGHUP sent to prometheus made it reload its config file instantly.
 ```
@@ -237,4 +237,4 @@ Run `confd-sidecar` with no parameters to get information.
 
 ## License
 
-This program is distributed under the [Apache 2.0](LICENSE) license.
+This program is distributed under the [Apache 2.0](LICENSE.html) license.
