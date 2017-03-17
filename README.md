@@ -186,7 +186,6 @@ Here is a minimal sample JSON file for Marathon that would run the above contain
     "CONFD_CONFDFILE_1": "prometheus.toml\n[template]\nsrc = \"prometheus.yml.tmpl\"\ndest = \"/etc/prometheus/prometheus.yml\"\nkeys = [\"/prometheus/configfile\"]\n",
     "CONFD_PATH": "/bin/confd",
     "CONFD_BACKEND": "consul",
-    "STORAGE_PATH": "/prometheus",
     "CONFD_NODE": "localhost:8500",
     "CONFD_CONFDIR": "/etc/confd"
   },
